@@ -4,14 +4,17 @@ USE ieee.numeric_std.all;
 
 ENTITY portas IS
 port(
-     A,B : IN STD_LOGIC;
-      X : OUT STD_LOGIC);
+     A,B : IN bit;
+	 X : buffer bit;
+	 S : out  bit);
 END portas;
 
 architecture portasLogicas of portas is
 Begin
 
     -- Porta Logica NAND
-    X <= NOT(A NAND B));
+    X <= A NAND B;
+	
+	S <= NOT X;
 
 end portasLogicas;
