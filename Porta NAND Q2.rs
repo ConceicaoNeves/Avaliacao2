@@ -9,5 +9,6 @@ x = !(a && b);
 
 nand = !x;
 
+
 println!("{}",nand);        //simula a saida de dados
 }
